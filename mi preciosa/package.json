@@ -1,0 +1,20 @@
+{
+  "name": "pagina-romantica",
+  "version": "1.0.0",
+  "description": "Página romántica con carrusel de fotos para mi amor",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 10000",
+    "build": "echo 'Build completado - archivos estáticos listos'",
+    "dev": "npx serve -s . -l 3000"
+  },
+  "keywords": ["romantic", "carousel", "photos", "love"],
+  "author": "Diego",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
