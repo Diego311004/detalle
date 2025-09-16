@@ -27,22 +27,28 @@ Proyecto estático en HTML, CSS y JS con carrusel de imágenes, frases y poema.
 ### Opción 1: Desde GitHub (Recomendado)
 1. Sube tu proyecto a GitHub
 2. Ve a [render.com](https://render.com) y crea una cuenta
-3. Haz clic en "New +" → "Static Site"
+3. Haz clic en "New +" → "Web Service"
 4. Conecta tu repositorio de GitHub
 5. Configuración:
    - **Name**: `pagina-romantica`
-   - **Build Command**: `npm install && npm run build`
-   - **Publish Directory**: `.` (raíz del proyecto)
+   - **Environment**: `Node`
+   - **Build Command**: `npm install`
    - **Start Command**: `npm start`
-6. Haz clic en "Create Static Site"
+   - **Plan**: `Free`
+6. Haz clic en "Create Web Service"
 
 ### Opción 2: Desde archivos locales
 1. Comprime toda la carpeta del proyecto en un ZIP
 2. Ve a [render.com](https://render.com)
-3. Haz clic en "New +" → "Static Site"
+3. Haz clic en "New +" → "Web Service"
 4. Selecciona "Upload ZIP"
 5. Sube tu archivo ZIP
-6. Configura igual que la Opción 1
+6. Configuración:
+   - **Name**: `pagina-romantica`
+   - **Environment**: `Node`
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+   - **Plan**: `Free`
 
 ### Notas importantes
 - Render detectará automáticamente que es un sitio estático

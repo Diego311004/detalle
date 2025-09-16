@@ -4,7 +4,7 @@
   "description": "Página romántica con carrusel de fotos para mi amor",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve -s . -l 10000",
+    "start": "npx serve -s . -l $PORT",
     "build": "echo 'Build completado - archivos estáticos listos'",
     "dev": "npx serve -s . -l 3000"
   },
