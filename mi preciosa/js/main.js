@@ -4,7 +4,7 @@
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
 
-    // Configuración: usando tus 22 fotos con frases románticas
+    // Configuración: usando tus 15 fotos con frases románticas
     const slidesData = [
         { src: 'assets/foto1.jpg', caption: 'Mi amor, contigo cada día tiene magia.' },
         { src: 'assets/foto2.jpg', caption: 'Mi princesa, mi vida, mi todo.' },
@@ -20,14 +20,7 @@
         { src: 'assets/foto12.jpg', caption: 'Mi vida, contigo todo tiene sentido.' },
         { src: 'assets/foto13.jpg', caption: 'Princesa, eres mi estrella de la mañana.' },
         { src: 'assets/foto14.jpg', caption: 'Mi amor, eres mi refugio y mi hogar.' },
-        { src: 'assets/foto15.jpg', caption: 'Mi vida, contigo cada día es una aventura.' },
-        { src: 'assets/foto16.jpg', caption: 'Princesa, tu risa es mi melodía favorita.' },
-        { src: 'assets/foto17.jpg', caption: 'Mi amor, te elijo hoy, mañana y siempre.' },
-        { src: 'assets/foto18.jpg', caption: 'Mi vida, eres el sueño que no quiero despertar.' },
-        { src: 'assets/foto19.jpg', caption: 'Princesa, si existes, lo demás es sencillo.' },
-        { src: 'assets/foto20.jpg', caption: 'Mi amor, eres mi mundo completo.' },
-        { src: 'assets/foto21.jpg', caption: 'Mi vida, contigo el mundo se pinta de rosa.' },
-        { src: 'assets/foto22.jpg', caption: 'Princesa, eres mi universo entero.' }
+        { src: 'assets/foto15.jpg', caption: 'Mi vida, contigo cada día es una aventura.' }
     ];
 
     const phrases = [
@@ -45,7 +38,17 @@
         'Mi amor, cada día te amo más que ayer.',
         'Mi vida, eres mi inspiración constante.',
         'Princesa, contigo todo tiene sentido.',
-        'Mi amor, eres mi estrella de la mañana.'
+        'Mi amor, eres mi estrella de la mañana.',
+        'Mi vida, eres la melodía de mi corazón.',
+        'Princesa, cada abrazo tuyo es un paraíso.',
+        'Mi amor, contigo el mundo se vuelve mágico.',
+        'Mi vida, eres mi rosa favorita que nunca se marchita.',
+        'Princesa, tu amor es mi fuerza y mi paz.',
+        'Mi amor, eres mi mariposa que revolotea en mi alma.',
+        'Mi vida, contigo cada momento es perfecto.',
+        'Princesa, eres mi luna que ilumina mis noches.',
+        'Mi amor, tu sonrisa es mi sol de cada día.',
+        'Mi vida, eres mi universo completo y mi todo.'
     ];
 
     // Render de slides
@@ -135,6 +138,33 @@
     // Inicio
     update();
     startAutoplay();
+
+    // Crear corazones flotantes
+    function createFloatingHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '💕';
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        heart.style.animationDelay = Math.random() * 2 + 's';
+        
+        document.getElementById('floating-hearts').appendChild(heart);
+        
+        // Remover el corazón después de la animación
+        setTimeout(() => {
+            if (heart.parentNode) {
+                heart.parentNode.removeChild(heart);
+            }
+        }, 8000);
+    }
+
+    // Crear corazones cada 2 segundos
+    setInterval(createFloatingHeart, 2000);
+    
+    // Crear algunos corazones iniciales
+    for (let i = 0; i < 5; i++) {
+        setTimeout(createFloatingHeart, i * 400);
+    }
 })();
 
 
